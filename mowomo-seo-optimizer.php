@@ -64,6 +64,7 @@ if (!function_exists('mwm_seo_optimizer_constructor')) {
 
         // Load includes
         require_once MWM_INC.'class.mwm-seo-optimizer.php';
+        require_once MWM_INC.'admin/class.mwm-seo-optimizer-post-data.php';
         require_once MWM_INC.'class.mwm-seo-optimizer-schema.php';
         require_once MWM_INC.'functions.mwm-seo-optimizer.php';
 

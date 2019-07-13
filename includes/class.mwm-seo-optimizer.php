@@ -34,7 +34,16 @@ if (!class_exists('mwm_seo_optimizer')) {
         protected static $instance;
 
         /**
-         * Plugin schemas.
+         * Plugin Post Data.
+         *
+         * @var \mwm_seo_optimizer_post_data
+         *
+         * @version 1.0.0
+         */
+        public $post_data;
+
+        /**
+         * Plugin Schemas.
          *
          * @var \mwm_seo_optimizer_schemas
          *
@@ -67,8 +76,12 @@ if (!class_exists('mwm_seo_optimizer')) {
          */
         public function __construct()
         {
+            // Adding post data
+            $this->post_data = new mwm_seo_optimizer_post_data();
+
             // Adding schemas.
             $this->schemas = new mwm_seo_optimizer_schema();
+            
 
             // Adding assets.
             add_action('wp_enqueue_scripts', array($this, 'mwm_enqueue_assets'));
